@@ -1,0 +1,209 @@
+body{
+    background-color: #D5D5D5;      
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+    font-family: 'Arial';
+} 
+.container{
+    display: flex;
+}
+.left-panel, .right-panel{
+    width: 10%;
+}
+.main-content{
+    width: 80%;
+}
+.main-content > :not(.pages.page-1){
+    margin-top: 20px;
+}
+.pages{
+    margin-bottom: 40px;
+    background-color: #E9E7EA;
+}
+.page {
+    display: none;
+    /* position: absolute; */
+    /* pointer-events: none; */
+    will-change: transform, opacity;
+}
+.page.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeDown 3s ease forwards;
+}
+.page.fade-out {
+    animation: fadeUp 0.5 ease forwards;
+}
+
+@keyframes fadeDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+.pagination{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination .current-page{
+    color: blue;
+    text-decoration: underline blue;
+}
+.header{
+    display: flex;
+    padding: 4px;
+}
+.header-info{
+    margin-left: 7px;
+    width: 60%;
+}
+.header-contacts{
+    border-left: 2px solid #000;
+    width: 40%;
+    margin-top: 10px;
+}
+.header-contacts p{
+    margin: 10px 0 10px 4px;
+}
+.icon{
+    width: 20px;
+}
+.career-goals{
+    margin-left: 7px;
+}
+.divider{
+    width: 50px;
+    display: inline-block;
+    height: 4px;
+    background-color: #000;
+}
+
+.section-title .title{
+    text-transform:uppercase;
+}
+p{
+    margin: 0;
+}
+.section-title {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: center;
+    margin: 20px 0;
+}
+
+.section-title hr {
+    border: none;
+    border-top: 1px solid #aeaaaa; 
+    width: calc(100% - 20px); 
+}
+
+.section-content .content{
+    margin:12px 3px;
+}
+.section-content .skill-list{
+    padding: 0;
+}
+.section-content .skill-list li{
+    margin:12px 3px;
+    list-style: none;
+}
+.education-skills{
+    margin-left: 7px;
+    display: flex;
+}
+.education{
+    width: 50%;
+}
+.skills{
+    width: 50%;
+}
+.certificate-prize-experience{
+    display: flex;
+    margin-left: 7px;
+}
+.certificate{
+    width: 25%;
+}
+.prize{
+    width: 25%;
+}
+.experience{
+    width: 50%;
+}
+.company-role{
+    display: flex;
+    padding-bottom: 24px;
+}
+.company{
+    width: 25%;
+}
+.role{
+    border-left: 2px solid #000;
+    width: 75%;
+    
+}
+.role .role-name{
+    text-transform: uppercase;
+    margin-left: 3%;
+}
+.project{
+    margin:0 12px;
+    padding-bottom: 24px;
+}
+.project-detail{
+    display: flex;
+}
+.project-overview{
+    width: 40%;
+}
+.project-description{
+    width: 60%;
+}
+.highlight {
+    text-decoration: underline;
+    font-style: italic;
+    color: #555;
+}
+.project-detail{
+    border:1px solid #ccc;
+}
+.project-description{
+    border-left: 2px solid #ccc;
+}
+.project-description p{
+    margin-left:17px !important;
+}
+a:hover{
+    color: #777;
+}
+
+.right-panel, .left-panel{
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+.right-panel button, .left-panel button{
+    width: 43px;
+    height: 103px;
+    cursor: pointer;
+}
