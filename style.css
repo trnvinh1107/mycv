@@ -185,6 +185,10 @@ p{
     font-style: italic;
     color: #555;
 }
+.line{
+    word-wrap: break-word; /* Ngắt từ khi không đủ chỗ */
+    word-break: break-all;
+}
 .project-detail{
     border:1px solid #ccc;
 }
